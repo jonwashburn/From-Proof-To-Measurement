@@ -550,13 +550,7 @@ Each normalized quantity equals a fixed constant or a dimensionless theorem (\(2
 
 \paragraph{Falsifiability rule (single inequality).}
 All experimental checks reduce to one auditable comparison with pre\-declared coverage \(k\in\{1,2\}\):
-\[
-\left|\frac{\lambda_{\mathrm{kin}}-\lambda_{\mathrm{rec}}}{\lambda_{\mathrm{rec}}}\right|
-\ \le\ 
-k\,u_{\mathrm{comb}},
-\qquad
-u_{\mathrm{comb}}\,=\,\sqrt{\,u(\lambda_{\mathrm{kin}})^{2}+u(\lambda_{\mathrm{rec}})^{2}-2\rho\,u(\lambda_{\mathrm{kin}})\,u(\lambda_{\mathrm{rec}})\,}.
-\]
+\\begin{align*}\n \left|\\frac{\\lambda_{\\mathrm{kin}}-\\lambda_{\\mathrm{rec}}}{\\lambda_{\\mathrm{rec}}}\\right| &\\le k\\,u_{\\mathrm{comb}},\\\\\n u_{\\mathrm{comb}} &= \\sqrt{u(\\lambda_{\\mathrm{kin}})^{2}+u(\\lambda_{\\mathrm{rec}})^{2}-2\\rho\\,u(\\lambda_{\\mathrm{kin}})\\,u(\\lambda_{\\mathrm{rec}})}.\n\\end{align*}
 No parameter may be adjusted after seeing the data;
 \noindent As a computational alternative for non-linear propagation, the Monte Carlo supplement may be used~\cite{JCGM101}.
  \(\rho\) (correlation) and \(k\) are declared \emph{a priori}.
@@ -763,11 +757,7 @@ Let \(G:=(\mathbb{R}_{>0})^{2}\) act on the unit labels by
 (\alpha,\beta)\cdot(\tau_{0},\ell_{0})\;:=\;(\alpha\,\tau_{0},\,\beta\,\ell_{0}).
 \]
 This induces the transformations
-\[
-c\mapsto c'=\frac{\ell_{0}'}{\tau_{0}'}=\frac{\beta}{\alpha}\,c,\qquad
-\tau_{\mathrm{rec}}\mapsto\tau_{\mathrm{rec}}'=K\,\tau_{0}'=\alpha\,\tau_{\mathrm{rec}},\qquad
-\lambda_{\mathrm{kin}}\mapsto\lambda_{\mathrm{kin}}'=c'\tau_{\mathrm{rec}}'=\beta\,\lambda_{\mathrm{kin}},
-\]
+\\begin{align*}\n c &\\mapsto c' = \\frac{\\ell_{0}'}{\\tau_{0}'} = \\frac{\\beta}{\\alpha}\\,c, \\\\\n \\tau_{\\mathrm{rec}} &\\mapsto \\tau_{\\mathrm{rec}}' = K\\,\\tau_{0}' = \\alpha\\,\\tau_{\\mathrm{rec}}, \\\\\n \\lambda_{\\mathrm{kin}} &\\mapsto \\lambda_{\\mathrm{kin}}' = c'\\tau_{\\mathrm{rec}}' = \\beta\\,\\lambda_{\\mathrm{kin}}.\n\\end{align*}
 and leaves \(J\) and \(K\) unchanged (they are dimensionless).
 \end{definition}
 
@@ -916,10 +906,7 @@ Report \(\sigma_s,\sigma_1,\sigma_2\) (or bounds) and compute \(\rho\) according
 
 \paragraph{Unknown correlation (conservative bounds).}
 If \(\rho\) cannot be credibly estimated, adopt the conservative envelope
-\[
-u_{\mathrm{comb}} \le u(\ell_0)+u(\lambda_{\mathrm{rec}})\quad(\rho=+1\ \text{worst case}),\qquad
-u_{\mathrm{comb}} \ge \big|\,u(\ell_0)-u(\lambda_{\mathrm{rec}})\,\big|\quad(\rho=-1).
-\]
+\\begin{align*}\n u_{\\mathrm{comb}} &\\le u(\\ell_0)+u(\\lambda_{\\mathrm{rec}}) && \\text{(worst case; $\\rho=+1$)},\\\\\n u_{\\mathrm{comb}} &\\ge \\big|\\,u(\\ell_0)-u(\\lambda_{\\mathrm{rec}})\\,\\big| && \\text{($\\rho=-1$)}.\n\\end{align*}
 Predeclare which bound is used; do not revise after observing \(D\).
 
 \subsection*{B.4 Coverage decisions}
@@ -929,7 +916,13 @@ Let \(Z:=|D|/u_{\mathrm{comb}}\). The acceptance rule is \(Z\le k\) with pre\-de
   \item Without distribu\-tional assumptions, Chebyshev’s inequality~\cite{Billingsley1995} guarantees \(P(|Z|>k)\le 1/k^2\); the rule remains valid but conservative.
   \item If \(u(\cdot)\) is estimated from \(n\) repeats (Type A), replace \(k\) by the appropriate Student-\(t\) quantile~\cite{Student1908} \(t_{n-1,\,\gamma}\) (pre\-declared \(\gamma\)).
 \end{itemize}
-Coverage level, correla\-tion treatment (\(\rho\) or a bound), and any rep\-etition/averaging protocol must be declared \emph{a priori}.
+
+\begin{itemize}
+  \item Coverage level $k$ (pre-declared).
+  \item Correlation treatment: $\rho$ or a documented bound.
+  \item Repetition/averaging protocol (pre-declared).
+\end{itemize}
+
 
 \subsection*{B.5 Replication and averaging (fixed pipeline)}
 If \(X_i,Y_i\) (\(i=1,\dots,n\)) are \(n\) independent replications using the \emph{same fixed} pipeline and pre\-declared aggregator, define
@@ -940,8 +933,11 @@ If \(X_i,Y_i\) (\(i=1,\dots,n\)) are \(n\) independent replications using the \e
 and test \(|\bar{D}| \le k\,\bar{u}_{\mathrm{comb}}\). Do not alter weights post hoc; if unequal \(u_{\mathrm{comb},i}\) are pre\-declared, use fixed inverse\-variance weights.
 
 \paragraph{Summary.}
-The only ingredients entering the decision rule are \(u(\ell_0)\), \(u(\lambda_{\mathrm{rec}})\), the correlation model (\(\rho\) or a conservative bound), and a pre\-declared coverage factor \(k\). The constants \(K\) and \(J\) are dimensionless and exact in this context and therefore contribute no uncertainty.
-
+\begin{itemize}
+  \item Inputs: $u(\ell_0)$, $u(\lambda_{\mathrm{rec}})$, and correlation model ($\rho$ or a bound).
+  \item Decision: accept if $Z=|D|/u_{\mathrm{comb}} \le k$ with pre-declared $k$.
+  \item Constants: $K$ and $J$ are exact (dimensionless); they contribute no uncertainty.
+\end{itemize}
 \subsection*{B.6 Uncertainty budget (compact list)}
 \textbf{Route A (length-side display \(\ell_0\)).} Contributors to \(u(\ell_0)\): (i) interferometer scale factor; (ii) frequency-comb traceability to the second; (iii) environmental model (pressure, temperature, humidity); (iv) alignment/Abbé offsets; (v) data reduction repeatability. \emph{Target (illustrative):} \(u(\ell_0)=1\times10^{-9}\).
 
