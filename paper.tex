@@ -557,13 +557,15 @@ k\,u_{\mathrm{comb}},
 \qquad
 u_{\mathrm{comb}}\,=\,\sqrt{\,u(\lambda_{\mathrm{kin}})^{2}+u(\lambda_{\mathrm{rec}})^{2}-2\rho\,u(\lambda_{\mathrm{kin}})\,u(\lambda_{\mathrm{rec}})\,}.
 \]
-No parameter may be adjusted after seeing the data; \(\rho\) (correlation) and \(k\) are declared \emph{a priori}.
+No parameter may be adjusted after seeing the data;
+\noindent As a computational alternative for non-linear propagation, the Monte Carlo supplement may be used~\cite{JCGM101}.
+ \(\rho\) (correlation) and \(k\) are declared \emph{a priori}.
 
 \paragraph{What counts as a knob (forbidden).}
 (i) altering \(k\) after observing the discrepancy; (ii) reweighting or trimming data ex–post to reduce the discrepancy; (iii) introducing offsets/scales in \(S/\hbar\) (would violate \(J(1)=0\)); (iv) redefining anchors post hoc.
 
 \paragraph{What does \emph{not} count as a knob (allowed).}
-(i) choosing \((\tau_{0},\ell_{0})\) as unit names; (ii) reporting certified \(u(\cdot)\) from traceable calibrations; (iii) declaring \(\rho\) based on design (disjoint chains) or using a conservative bound; (iv) re-running the same fixed pipeline on new data.
+(i) choosing \((\tau_{0},\ell_{0})\) as unit names; (ii) reporting certified \(u(\cdot)\) from traceable calibrations~\cite{ISO17025,CIPM_MRA}; (iii) declaring \(\rho\) based on design (disjoint chains) or using a conservative bound; (iv) re-running the same fixed pipeline on new data.
 
 \paragraph{Consequence.}
 Because the derivation layer is dimensionless and the display layer is algebraic, there is no free parameter capable of changing the decision outcome except by changing declared uncertainty or correlation—both of which must be specified before observing the comparison. Hence the program is parameter-free in the operational sense required for audit.
@@ -924,8 +926,8 @@ Predeclare which bound is used; do not revise after observing \(D\).
 Let \(Z:=|D|/u_{\mathrm{comb}}\). The acceptance rule is \(Z\le k\) with pre\-declared \(k\in\{1,2\}\).
 \begin{itemize}
   \item If the standard\-ized error is approximately normal, \(k=1\) and \(k=2\) correspond to \(\approx68\%\) and \(\approx95\%\) coverage, respectively.
-  \item Without distribu\-tional assumptions, Chebyshev’s inequality guarantees \(P(|Z|>k)\le 1/k^2\); the rule remains valid but conservative.
-  \item If \(u(\cdot)\) is estimated from \(n\) repeats (Type A), replace \(k\) by the appropriate Student-\(t\) quantile \(t_{n-1,\,\gamma}\) (pre\-declared \(\gamma\)).
+  \item Without distribu\-tional assumptions, Chebyshev’s inequality~\cite{Billingsley1995} guarantees \(P(|Z|>k)\le 1/k^2\); the rule remains valid but conservative.
+  \item If \(u(\cdot)\) is estimated from \(n\) repeats (Type A), replace \(k\) by the appropriate Student-\(t\) quantile~\cite{Student1908} \(t_{n-1,\,\gamma}\) (pre\-declared \(\gamma\)).
 \end{itemize}
 Coverage level, correla\-tion treatment (\(\rho\) or a bound), and any rep\-etition/averaging protocol must be declared \emph{a priori}.
 
@@ -1098,5 +1100,17 @@ Let \(\varphi=\tfrac{1+\sqrt{5}}{2}\) be the positive solution of \(x=1+\tfrac{1
 \bibitem{NISTSP1065} NIST Special Publication 1065: Handbook of Frequency Stability Analysis, 2008, NIST.
 \bibitem{CGPM2018} 26th CGPM (2018): Resolution 1—On the revision of the International System of Units (SI).
 
+
+\bibitem{ISO17025} ISO/IEC~17025:2017, General requirements for the competence of testing and calibration laboratories.
+\bibitem{CIPM_MRA} CIPM MRA 1999, Mutual recognition of national measurement standards and of calibration and measurement certificates issued by NMIs.
+\bibitem{JCGM101} JCGM~101:2008, Evaluation of measurement data — Supplement~1 to the GUM: Propagation of distributions using a Monte Carlo method.
+\bibitem{JCGM102} JCGM~102:2011, Evaluation of measurement data — Supplement~2 to the GUM: Extension to any number of output quantities.
+\bibitem{MiP-Kg} BIPM, Mise en pratique for the definition of the kilogram (2019, updated), \url{https://www.bipm.org}.
+\bibitem{CundiffYe2003} Cundiff S~T and Ye J 2003 Colloquium: Femtosecond optical frequency combs \textit{Rev. Mod. Phys.} \textbf{75} 325–342.
+\bibitem{Diddams2001} Diddams S~A et~al. 2001 An optical clock based on a single trapped $^{199}$Hg$^+$ ion \textit{Science} \textbf{293} 825–828.
+\bibitem{Riehle2015} Riehle F 2015 Towards a redefinition of the second based on optical atomic clocks \textit{Comptes Rendus Physique} \textbf{16} 506–515.
+\bibitem{Student1908} Student 1908 The probable error of a mean \textit{Biometrika} \textbf{6} 1–25.
+\bibitem{Billingsley1995} Billingsley P 1995 \textit{Probability and Measure}, 3rd ed. (Wiley).
+\bibitem{Quinn2014G} Quinn T~J, Speake C, Davis R~S, Richman S~J and Berry J~P 2014 The Newtonian constant of gravitation: a constant too difficult to measure? \textit{Phil. Trans. R. Soc. A} \textbf{372} 20140253.
 \end{thebibliography}
 \end{document}
