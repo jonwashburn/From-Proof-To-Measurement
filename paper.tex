@@ -551,7 +551,9 @@ Each normalized quantity equals a fixed constant or a dimensionless theorem (\(2
 \paragraph{Falsifiability rule (single inequality).}
 All experimental checks reduce to one auditable comparison with pre\-declared coverage \(k\in\{1,2\}\):
 \begin{align*}
- \left|\\frac{\\lambda_{\\mathrm{kin}}-\\lambda_{\\mathrm{rec}}}{\\lambda_{\\mathrm{rec}}}\\right| &\\le k\\,u_{\\mathrm{comb}},\\\\n u_{\\mathrm{comb}} &= \\sqrt{u(\\lambda_{\\mathrm{kin}})^{2}+u(\\lambda_{\\mathrm{rec}})^{2}-2\\rho\\,u(\\lambda_{\\mathrm{kin}})\\,u(\\lambda_{\\mathrm{rec}})}.\n\end{align*}
+ \left|\\frac{\\lambda_{\\mathrm{kin}}-\\lambda_{\\mathrm{rec}}}{\\lambda_{\\mathrm{rec}}}\\right| &\\le k\\,u_{\\mathrm{comb}},\\\\
+ u_{\\mathrm{comb}} &= \\sqrt{u(\\lambda_{\\mathrm{kin}})^{2}+u(\\lambda_{\\mathrm{rec}})^{2}-2\\rho\\,u(\\lambda_{\\mathrm{kin}})\\,u(\\lambda_{\\mathrm{rec}})}.
+\end{align*}
 No parameter may be adjusted after seeing the data;
 \noindent As a computational alternative for non-linear propagation, the Monte Carlo supplement may be used~\cite{JCGM101}.
  \(\rho\) (correlation) and \(k\) are declared \emph{a priori}.
@@ -759,7 +761,8 @@ Let \(G:=(\mathbb{R}_{>0})^{2}\) act on the unit labels by
 \]
 This induces the transformations
 \begin{align*}
- c &\\mapsto c' = \\frac{\\ell_{0}'}{\\tau_{0}'} = \\frac{\\beta}{\\alpha}\\,c, \\\\n \\tau_{\\mathrm{rec}} &\\mapsto \\tau_{\\mathrm{rec}}' = K\\,\\tau_{0}' = \\alpha\\,\\tau_{\\mathrm{rec}}, \\\\n \\lambda_{\\mathrm{kin}} &\\mapsto \\lambda_{\\mathrm{kin}}' = c'\\tau_{\\mathrm{rec}}' = \\beta\\,\\lambda_{\\mathrm{kin}}.\n\end{align*}
+ c &\\mapsto c' = \\frac{\\ell_{0}'}{\\tau_{0}'} = \\frac{\\beta}{\\alpha}\\,c, \\\\n \\tau_{\\mathrm{rec}} &\\mapsto \\tau_{\\mathrm{rec}}' = K\\,\\tau_{0}' = \\alpha\\,\\tau_{\\mathrm{rec}}, \\\\n \\lambda_{\\mathrm{kin}} &\\mapsto \\lambda_{\\mathrm{kin}}' = c'\\tau_{\\mathrm{rec}}' = \\beta\\,\\lambda_{\\mathrm{kin}}.
+\end{align*}
 and leaves \(J\) and \(K\) unchanged (they are dimensionless).
 \end{definition}
 
@@ -909,7 +912,9 @@ Report \(\sigma_s,\sigma_1,\sigma_2\) (or bounds) and compute \(\rho\) according
 \paragraph{Unknown correlation (conservative bounds).}
 If \(\rho\) cannot be credibly estimated, adopt the conservative envelope
 \begin{align*}
- u_{\\mathrm{comb}} &\\le u(\\ell_0)+u(\\lambda_{\\mathrm{rec}}) && \\text{(worst case; $\\rho=+1$)},\\\\n u_{\\mathrm{comb}} &\\ge \\big|\\,u(\\ell_0)-u(\\lambda_{\\mathrm{rec}})\\,\\big| && \\text{($\\rho=-1$)}.\n\end{align*}
+ u_{\\mathrm{comb}} &\\le u(\\ell_0)+u(\\lambda_{\\mathrm{rec}}) && \\text{(worst case; $\\rho=+1$)},\\\\
+ u_{\\mathrm{comb}} &\\ge \\big|\\,u(\\ell_0)-u(\\lambda_{\\mathrm{rec}})\\,\\big| && \\text{($\\rho=-1$)}.
+\end{align*}
 Predeclare which bound is used; do not revise after observing \(D\).
 
 \subsection*{B.4 Coverage decisions}
