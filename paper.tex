@@ -582,7 +582,8 @@ Because the derivation layer is dimensionless and the display layer is algebraic
   \frac{S}{\hbar}=J.
   \]
   \item Proceed to sector-specific applications \emph{without} feeding data back into proofs: use the same fixed semantics and uncertainty policy.
-  \item Replicate with disjoint hardware/teams to check stability of the pass/\,fail statistic;\linebreak  tighten uncertainty budgets (smaller \(u(\ell_{0})\), independent \(\lambda_{\mathrm{rec}}\)) if higher precision is desired.
+  \item Replicate with disjoint hardware/teams to check stability of the pass/\,fail statistic.
+  \item Tighten uncertainty budgets (smaller \(u(\ell_{0})\), independent \(\lambda_{\mathrm{rec}}\)) if higher precision is desired.
 \end{itemize}
 
 \subsection*{If it fails (persistently, after controls)}
@@ -725,7 +726,7 @@ Sector-specific applications, parameter estimation, spectrum claims, or any feed
 
 We have fixed a proof-verified \emph{Reality Bridge} that carries a strictly dimensionless derivation layer into SI displays without introducing tunable parameters. The construction delivers (i) non-circularity (unit relabelings factor out), (ii) uniqueness at the stated symmetry, and (iii) two independent SI landings—time-first and length-first—whose numerical agreement is evaluated by a single, pre\-declared inequality using relative standard uncertainties and an explicit correlation model. The operational outcome is binary: either the two routes agree within combined uncertainty at coverage \(k\), or the semantics (or a landing assumption) is falsified.
 
-This closes the gap between formal theorem and laboratory statement with a minimal, auditable interface. The artifact and audit trail make replication straightforward: choose unit labels and anchors, compute displays, declare uncertainties and correlation, and evaluate the pass/\,fail statistic. Subsequent work may pursue sector-specific applications and higher-precision tests, provided they preserve the no-knob policy and the fixed decision rule introduced here.
+This closes the gap between formal theorem and laboratory statement with a minimal, auditable interface. The artifact and audit trail make replication straightforward: choose unit labels and anchors, compute displays, declare uncertainties and correlation, and evaluate the pass/\,fail statistic. Subsequent work may pursue sector-specific applications\linebreak and higher-precision tests, provided they preserve the no-knob policy and the fixed decision rule introduced here.
 
 \paragraph{Broader impact.}
 The framework upgrades “parameter-free” from a slogan to an auditable engineering discipline: derivations remain dimensionless and fixed, displays are algebraic and non-circular, and empirical accountability is enforced by a single pre\-declared inequality. This template is portable: any candidate theory that can present its inputs in the same normalized form can be evaluated against laboratory reality without introducing hidden knobs.
