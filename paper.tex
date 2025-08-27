@@ -61,7 +61,7 @@ The time-first landing fixes \(\tau_{0}\) by clock comparison and then computes 
 The length-first landing adopts \(\lambda_{\mathrm{rec}}\) as a conventional anchor and then computes \(\tau_{\mathrm{rec}}=\lambda_{\mathrm{rec}}/c\) and the implied \(\tau_{0}\).
 Consistency is not optional: both routes must agree within their combined uncertainty. Writing \(u(\cdot)\) for relative standard uncertainty and taking coverage \(k\in\{1,2\}\),
 \[
-u_{\mathrm{comb}}=\sqrt{\,u(\lambda_{\mathrm{kin}})^{2}+u(\lambda_{\mathrm{rec}})^{2}},\qquad
+u_{\mathrm{comb}}\,=\,\sqrt{\,u(\lambda_{\mathrm{kin}})^{2}+u(\lambda_{\mathrm{rec}})^{2}},\qquad
 \left|\frac{\lambda_{\mathrm{kin}}-\lambda_{\mathrm{rec}}}{\lambda_{\mathrm{rec}}}\right|\ \le\ k\,u_{\mathrm{comb}}
 \]
 must hold. No thresholds or regressions appear anywhere—one inequality governs success or failure.
@@ -103,7 +103,7 @@ We do not introduce sector models, data fits, or numeric predictions beyond the 
 We define a time-first landing (choose \(\tau_0\); compute \(\tau_{\mathrm{rec}}=\frac{2\pi}{8\ln\varphi}\tau_0\) and \(\lambda_{\mathrm{kin}}=c\,\tau_{\mathrm{rec}}\), \(c=\ell_0/\tau_0\)) and a length-first landing (adopt \(\lambda_{\mathrm{rec}}\); compute \(\tau_{\mathrm{rec}}=\lambda_{\mathrm{rec}}/c\) and the implied \(\tau_0\)). Consistency is required:
 \[
 \left|\frac{\lambda_{\mathrm{kin}}-\lambda_{\mathrm{rec}}}{\lambda_{\mathrm{rec}}}\right|\ \le\ k\,u_{\mathrm{comb}},\qquad
-u_{\mathrm{comb}}=\sqrt{u(\lambda_{\mathrm{kin}})^2+u(\lambda_{\mathrm{rec}})^2},\quad k\in\{1,2\}.
+u_{\mathrm{comb}}\,=\,\sqrt{u(\lambda_{\mathrm{kin}})^2+u(\lambda_{\mathrm{rec}})^2},\quad k\in\{1,2\}.
 \]
 Persistent failure falsifies the semantics or a landing assumption.
 
@@ -406,7 +406,7 @@ so the effective relative uncertainty is \(u(\lambda_{\mathrm{kin}})=u(\ell_{0})
 
 \textbf{Implied combined uncertainty.} With the above targets and \(\rho=0\),
 \[
-u_{\mathrm{comb}}=\sqrt{\,u(\ell_{0})^{2}+u(\lambda_{\mathrm{rec}})^{2}\,}\approx 1.0\times10^{-5}.
+u_{\mathrm{comb}}\,=\,\sqrt{\,u(\ell_{0})^{2}+u(\lambda_{\mathrm{rec}})^{2}\,}\approx 1.0\times10^{-5}.
 \]
 
 \textbf{Audit note.} These values are \emph{pre\-declared}. They may be updated only by issuing a new artifact pack (e.g., if a revised recommended value of \(G\) is adopted); retroactive changes after observing the comparison are not permitted.
@@ -555,7 +555,7 @@ All experimental checks reduce to one auditable comparison with pre\-declared co
 \ \le\ 
 k\,u_{\mathrm{comb}},
 \qquad
-u_{\mathrm{comb}}=\sqrt{\,u(\lambda_{\mathrm{kin}})^{2}+u(\lambda_{\mathrm{rec}})^{2}-2\rho\,u(\lambda_{\mathrm{kin}})\,u(\lambda_{\mathrm{rec}})\,}.
+u_{\mathrm{comb}}\,=\,\sqrt{\,u(\lambda_{\mathrm{kin}})^{2}+u(\lambda_{\mathrm{rec}})^{2}-2\rho\,u(\lambda_{\mathrm{kin}})\,u(\lambda_{\mathrm{rec}})\,}.
 \]
 No parameter may be adjusted after seeing the data; \(\rho\) (correlation) and \(k\) are declared \emph{a priori}.
 
@@ -893,7 +893,7 @@ u_{\mathrm{comb}}
 \paragraph{Design target (independence).}
 Engineer Route A and Route B to use disjoint calibration chains and hardware so that \(\rho\approx 0\). Then
 \[
-u_{\mathrm{comb}}=\sqrt{\,u(\ell_0)^2 + u(\lambda_{\mathrm{rec}})^2\,}.
+u_{\mathrm{comb}}\,=\,\sqrt{\,u(\ell_0)^2 + u(\lambda_{\mathrm{rec}})^2\,}.
 \]
 
 \paragraph{Shared-systematic decomposition (estimating \(\rho\)).}
@@ -926,7 +926,7 @@ Let \(Z:=|D|/u_{\mathrm{comb}}\). The acceptance rule is \(Z\le k\) with pre\-de
   \item Without distribu\-tional assumptions, Chebyshev’s inequality guarantees \(P(|Z|>k)\le 1/k^2\); the rule remains valid but conservative.
   \item If \(u(\cdot)\) is estimated from \(n\) repeats (Type A), replace \(k\) by the appropriate Student-\(t\) quantile \(t_{n-1,\,\gamma}\) (pre\-declared \(\gamma\)).
 \end{itemize}
-Coverage level, correlation treatment (\(\rho\) or a bound), and any repetition/averaging protocol must be declared \emph{a priori}.
+Coverage level, correla\-tion treatment (\(\rho\) or a bound), and any rep\-etition/averaging protocol must be declared \emph{a priori}.
 
 \subsection*{B.5 Replication and averaging (fixed pipeline)}
 If \(X_i,Y_i\) (\(i=1,\dots,n\)) are \(n\) independent replications using the \emph{same fixed} pipeline and pre\-declared aggregator, define
