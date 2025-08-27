@@ -1,0 +1,4 @@
+texlive=2024
+python=3.11
+latexmk=4.8+
+platform=Darwin

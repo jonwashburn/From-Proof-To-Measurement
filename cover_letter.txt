@@ -1,0 +1,15 @@
+Editor-in-Chief
+Metrologia
+
+Dear Editors,
+
+Please find enclosed our manuscript “From Proof to Measurement: A Reality Bridge with Falsifiable SI Landings”.
+
+The paper introduces a proof‑verified semantics that carries a dimensionless derivation layer into SI displays without introducing tunable parameters. It proves non‑circularity, uniqueness at the stated symmetry, and provides two independent SI landings tested by a single predeclared inequality with explicit uncertainty and correlation. No sector models or fits are used. A complete reproducibility pack (Lean theorem hooks, one‑command builds, deterministic display calculator) is included.
+
+We believe the methods and audit trail are aligned with Metrologia’s mission on rigor in measurement science.
+
+Sincerely,
+
+Jonathan Washburn (@jonwashburn)
+Recognition Physics Institute

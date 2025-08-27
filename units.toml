@@ -1,0 +1,6 @@
+tau0 = "1 s"
+ell0 = "299792458 m"
+# optional independent anchor for Route B
+# lambda_rec = "1 m"
+# u_lambda_rec = 1e-6
+# k = 2
