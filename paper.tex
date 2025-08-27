@@ -660,9 +660,9 @@ Set the following before any build or run:
 \texttt{latexmk -pdf -interaction=nonstopmode -halt-on-error paper.tex}
 \]
   \item Compute displays and the pass/fail statistic (reads \texttt{units.toml} in the same folder):
-\[
-\texttt{python3 display\_calculator.py --units units.toml --print}
-\]
+\begin{verbatim}
+python3 display_calculator.py --units units.toml --print
+\end{verbatim}
   \item Regenerate checksums and sizes:
 \begin{verbatim}
 python3 - <<'EOF'
@@ -678,13 +678,13 @@ Copy this output verbatim into \texttt{manifest.txt}.
 
 \subsection*{D. Minimal invocation of the display calculator}
 \paragraph{Input file \texttt{units.toml} (example).}
-\[
-\texttt{tau0 = "1 s"}\quad
-\texttt{ell0 = "299792458 m"}\quad
-\texttt{lambda\_rec = "1 m"}\quad
-\texttt{u\_lambda\_rec = 1e-6}\quad
-\texttt{k = 2}
-\]
+\begin{verbatim}
+tau0 = "1 s"
+ell0 = "299792458 m"
+lambda_rec = "1 m"
+u_lambda_rec = 1e-6
+k = 2
+\end{verbatim}
 \paragraph{Expected printed invariants (symbolic).}
 \[
 \frac{2\pi}{8\ln\varphi},\qquad
