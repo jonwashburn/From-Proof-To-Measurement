@@ -1,7 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage{amsmath,amssymb,amsfonts}
-\usepackage[hidelinks]{hyperref}
-\usepackage{amsthm}
+\usepackage[hidelinks]{hyperref}\n\usepackage{verbatim}\n\usepackage{amsthm}
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
@@ -664,13 +663,16 @@ Set the following before any build or run:
 \]
   \item Regenerate checksums and sizes:
 \[
-\texttt{python3 - <<'EOF' \newline
-import hashlib, os, sys \newline
-for fn in sorted(os.listdir('.')): \newline
-  if os.path.isfile(fn): \newline
-    h=hashlib.sha256(open(fn,'rb').read()).hexdigest() \newline
-    print(f\"{fn}\t{os.path.getsize(fn)}\tSHA256={h}\") \newline
-EOF}
+\begin{verbatim}
+python3 - <<'EOF'
+import hashlib, os, sys
+for fn in sorted(os.listdir('.')):
+  if os.path.isfile(fn):
+    h=hashlib.sha256(open(fn,'rb').read()).hexdigest()
+    print(f"{fn}\t{os.path.getsize(fn)}\tSHA256={h}")
+EOF
+\end{verbatim}
+
 \]
 Copy this output verbatim into \texttt{manifest.txt}.
 \end{itemize}
