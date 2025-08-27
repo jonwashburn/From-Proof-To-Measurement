@@ -664,7 +664,6 @@ Set the following before any build or run:
 \texttt{python3 display\_calculator.py --units units.toml --print}
 \]
   \item Regenerate checksums and sizes:
-\[
 \begin{verbatim}
 python3 - <<'EOF'
 import hashlib, os, sys
@@ -674,8 +673,6 @@ for fn in sorted(os.listdir('.')):
     print(f"{fn}\t{os.path.getsize(fn)}\tSHA256={h}")
 EOF
 \end{verbatim}
-
-\]
 Copy this output verbatim into \texttt{manifest.txt}.
 \end{itemize}
 
