@@ -3,6 +3,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{verbatim}
 \usepackage{amsthm}
+\allowdisplaybreaks
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
@@ -25,7 +26,7 @@ Austin, Texas, USA\\
 \maketitle
 
 \begin{abstract}
-This methods paper defines a proof–verified semantics that carries a strictly dimensionless derivation layer into SI displays without introducing tunable parameters. The inputs (proved upstream and not re-proved here) are: a unique symmetric multiplicative cost \(J(x)=\tfrac12(x+x^{-1})-1\) with log-axis form \(J(e^{t})=\cosh t-1\); a quantized tick with exact \(n\cdot\delta\) increments and gauge fixed up to a componentwise constant; an eight-phase minimal cycle in three-bit parity space; and the golden-ratio gap \(\ln\varphi\). We formalize a \emph{Reality Bridge} that (i) displays \(J\) additively as \(S/\hbar\) (no offset, no fit), (ii) assigns a recognition tick \(\tau_{\mathrm{rec}}=(2\pi/(8\ln\varphi))\,\tau_{0}\) and a kinematic hop length \(\lambda_{\mathrm{kin}}=c\,\tau_{\mathrm{rec}}\) with \(c=\ell_{0}/\tau_{0}\), and (iii) provides two independent SI landings (time-first and length-first) whose numerical agreement within stated combined uncertainty constitutes a single pass/fail criterion. We prove non-circularity (unit relabelings factor out and cannot alter dimensionless content) and uniqueness at the stated symmetry (the bridge is fixed up to trivial unit rescalings). No sector models, regressions, thresholds, or empirical tuning are used. A reproducibility pack (Lean theorem identifiers, checksums, and one-command scripts that compute both landings and the pass/fail statistic) is specified for audit.
+This methods paper defines a proof–verified semantics that carries a strictly dimensionless derivation layer into SI displays without introducing tunable parameters. The inputs (proved upstream and not re-proved here) are: a unique symmetric multiplicative cost \(J(x)=\tfrac12(x+x^{-1})-1\) with log-axis form \(J(e^{t})=\cosh t-1\); a quantized tick with exact \(n\cdot\delta\) increments and gauge fixed up to a componentwise constant; an eight-phase minimal cycle in three-bit parity space; and the golden-ratio gap \(\ln\varphi\). We formalize a \emph{Reality Bridge} that (i) displays \(J\) additively as \(S/\hbar\) (no offset, no fit), (ii) assigns a recognition tick \(\tau_{\mathrm{rec}}=(2\pi/(8\ln\varphi))\,\tau_{0}\) and a kinematic hop length \(\lambda_{\mathrm{kin}}=c\,\tau_{\mathrm{rec}}\) with \(c=\ell_{0}/\tau_{0}\), and (iii) provides two independent SI landings (time-first and length-first) whose numerical agreement within stated combined uncertainty constitutes a single pass/\,fail criterion. We prove non-circularity (unit relabelings factor out and cannot alter dimensionless content) and uniqueness at the stated symmetry (the bridge is fixed up to trivial unit rescalings). No sector models, regressions, thresholds, or empirical tuning are used. A reproducibility pack (Lean theorem identifiers, checksums, and one-command scripts that compute both landings and the pass/\,fail statistic) is specified for audit.
 \end{abstract}
 
 \section{Introduction}
@@ -69,7 +70,7 @@ must hold. No thresholds or regressions appear anywhere—one inequality governs
 \begin{enumerate}
   \item \emph{Non-circularity:} any relabeling of units factors through \((\tau_{0},\ell_{0})\), leaving the numerical content of the dimensionless inputs unchanged. The bridge cannot smuggle parameters back into proofs.
   \item \emph{Uniqueness at the stated symmetry:} among semantics that respect multiplicative symmetry \(x\mapsto 1/x\), preserve the eight-tick partition, and keep \(J\) dimensionless, the presented bridge is unique up to a single global affine rescaling of displays.
-  \item \emph{Falsifiability:} the two landings yield the pass/fail inequality above; persistent failure falsifies the semantics or a landing assumption.
+  \item \emph{Falsifiability:} the two landings yield the pass/\,fail inequality above; persistent failure falsifies the semantics or a landing assumption.
 \end{enumerate}
 
 \paragraph{What is not claimed.}
@@ -85,12 +86,12 @@ The paper defines the semantics, proves non-circularity and uniqueness, specifie
 The intended use case is the “last-mile” link in fundamental physics between dimensionless derivations and falsifiable, SI-native statements. Abstract or pre-geometric formalisms often yield ratios or symmetries but leave unitful predictions underdetermined. The Reality Bridge is designed to close this gap with a fixed, auditable semantics that remains non-circular and parameter-free at the derivation layer.
 
 \paragraph{Related standards and prior art.}
-We follow the terminology of the VIM~\cite{JCGM200} and the uncertainty framework of the GUM~\cite{JCGM100}: uncertainties are reported as (relative) standard uncertainties \(u(\cdot)\) with a predeclared coverage factor \(k\). The SI definitions (9th edition)~\cite{SI9} are used throughout; in particular, \(h\) and \(c\) are exact by definition whereas \(G\) carries a stated standard uncertainty. Our contribution is orthogonal to sector models: it supplies a fixed, auditable semantics that maps dimensionless invariants to SI displays and a single uncertainty-based pass/fail rule without fitting or thresholds.
+We follow the terminology of the VIM~\cite{JCGM200} and the uncertainty framework of the GUM~\cite{JCGM100}: uncertainties are reported as (relative) standard uncertainties \(u(\cdot)\) with a pre\-declared coverage factor \(k\). The SI definitions (9th edition)~\cite{SI9} are used throughout; in particular, \(h\) and \(c\) are exact by definition whereas \(G\) carries a stated standard uncertainty. Our contribution is orthogonal to sector models: it supplies a fixed, auditable semantics that maps dimensionless invariants to SI displays and a single uncertainty-based pass/\,fail rule without fitting or thresholds.
 
 \section{Scope, Claims, and Editorial Compliance}
 
 \paragraph{What this paper does.}
-We present a proof-first \emph{semantics} that maps dimensionless theorems (unique symmetric cost \(J\), quantized tick, eight-tick partition, \(\varphi\)) to SI displays for action and for clock/length. The bridge is fully specified, non-circular, and yields a single pass/fail laboratory criterion. No tunable parameters enter the derivations.
+We present a proof-first \emph{semantics} that maps dimensionless theorems (unique symmetric cost \(J\), quantized tick, eight-tick partition, \(\varphi\)) to SI displays for action and for clock/length. The bridge is fully specified, non-circular, and yields a single pass/\,fail laboratory criterion. No tunable parameters enter the derivations.
 
 \paragraph{What this paper does \emph{not} do.}
 We do not introduce sector models, data fits, or numeric predictions beyond the equality of two SI landings within stated uncertainty. Phenomenology (e.g., galaxy kernels, mass spectra) is out of scope and belongs in separate papers.
@@ -318,7 +319,7 @@ and the normalized displays again equal the same invariants:
 \paragraph{Consistency demand (no knobs).}
 When performed with the same \((\tau_{0},\ell_{0})\) labeling, Route A and Route B must yield identical numerical \(\tau_{\mathrm{rec}}\) and \(\lambda\) up to stated measurement uncertainty. Any persistent mismatch falsifies the semantics or a landing assumption; no parameter adjustment is permitted to reconcile the two.
 
-\section{Uncertainty Propagation and the Single Pass/Fail Inequality}
+\section{Uncertainty propagation and the pass/\,fail inequality}
 
 \noindent\textbf{Scope.} This section specifies how measurement uncertainty is propagated for the sole compliance check of the Reality Bridge. All uncertainties are \emph{relative standard} (one–sigma) uncertainties.
 
@@ -366,7 +367,7 @@ Fix a coverage factor \(k\in\{1,2\}\). With \(u_{\mathrm{comb}}=u_{\mathrm{comb}
 \ \le\ 
 k\,u_{\mathrm{comb}}.
 \]
-Equivalently, the standardized discrepancy
+Equivalently, the standard\-ized discrepancy
 \[
 Z\;:=\;\frac{|\lambda_{\mathrm{kin}}-\lambda_{\mathrm{rec}}|}{u_{\mathrm{comb}}\ \lambda_{\mathrm{rec}}}
 \]
@@ -408,7 +409,7 @@ so the effective relative uncertainty is \(u(\lambda_{\mathrm{kin}})=u(\ell_{0})
 u_{\mathrm{comb}}=\sqrt{\,u(\ell_{0})^{2}+u(\lambda_{\mathrm{rec}})^{2}\,}\approx 1.0\times10^{-5}.
 \]
 
-\textbf{Audit note.} These values are \emph{predeclared}. They may be updated only by issuing a new artifact pack (e.g., if a revised recommended value of \(G\) is adopted); retroactive changes after observing the comparison are not permitted.
+\textbf{Audit note.} These values are \emph{pre\-declared}. They may be updated only by issuing a new artifact pack (e.g., if a revised recommended value of \(G\) is adopted); retroactive changes after observing the comparison are not permitted.
 \end{remark}
 
 
@@ -548,7 +549,7 @@ Each normalized quantity equals a fixed constant or a dimensionless theorem (\(2
 \end{proof}
 
 \paragraph{Falsifiability rule (single inequality).}
-All experimental checks reduce to one auditable comparison with predeclared coverage \(k\in\{1,2\}\):
+All experimental checks reduce to one auditable comparison with pre\-declared coverage \(k\in\{1,2\}\):
 \[
 \left|\frac{\lambda_{\mathrm{kin}}-\lambda_{\mathrm{rec}}}{\lambda_{\mathrm{rec}}}\right|
 \ \le\ 
@@ -570,7 +571,7 @@ Because the derivation layer is dimensionless and the display layer is algebraic
 \section{What Success or Failure Would Mean}
 
 \subsection*{If the inequality holds (within stated \(k\))}
-\textbf{Interpretation.} The Reality Bridge is \emph{operationally consistent} at the tested precision: the two independently realized SI landings agree within the predeclared coverage \(k\) and combined relative uncertainty \(u_{\mathrm{comb}}\). No parameters have been tuned to obtain this result.
+\textbf{Interpretation.} The Reality Bridge is \emph{operationally consistent} at the tested precision: the two independently realized SI landings agree within the pre\-declared coverage \(k\) and combined relative uncertainty \(u_{\mathrm{comb}}\). No parameters have been tuned to obtain this result.
 
 \textbf{Immediate consequences.}
 \begin{itemize}
@@ -581,7 +582,7 @@ Because the derivation layer is dimensionless and the display layer is algebraic
   \frac{S}{\hbar}=J.
   \]
   \item Proceed to sector-specific applications \emph{without} feeding data back into proofs: use the same fixed semantics and uncertainty policy.
-  \item Replicate with disjoint hardware/teams to check stability of the pass/fail statistic;\linebreak  tighten uncertainty budgets (smaller \(u(\ell_{0})\), independent \(\lambda_{\mathrm{rec}}\)) if higher precision is desired.
+  \item Replicate with disjoint hardware/teams to check stability of the pass/\,fail statistic;\linebreak  tighten uncertainty budgets (smaller \(u(\ell_{0})\), independent \(\lambda_{\mathrm{rec}}\)) if higher precision is desired.
 \end{itemize}
 
 \subsection*{If it fails (persistently, after controls)}
@@ -618,7 +619,7 @@ This section fixes the files, identifiers, and deterministic steps required to a
   \frac{\lambda_{\mathrm{kin}}}{\ell_{0}}=\frac{2\pi}{8\ln\varphi},\quad
   \frac{S}{\hbar}=J.
   \]
-  \item \texttt{display\_calculator.py} — a minimal, deterministic program that (i) reads a unit-choice file, (ii) prints \(\tau_{\mathrm{rec}}\), \(\lambda_{\mathrm{kin}}\), and the normalized ratios, and (iii) computes the pass/fail statistic given \(\lambda_{\mathrm{rec}}\) and declared uncertainties.
+  \item \texttt{display\_calculator.py} — a minimal, deterministic program that (i) reads a unit-choice file, (ii) prints \(\tau_{\mathrm{rec}}\), \(\lambda_{\mathrm{kin}}\), and the normalized ratios, and (iii) computes the pass/\,fail statistic given \(\lambda_{\mathrm{rec}}\) and declared uncertainties.
   \item \texttt{units.toml} — a tiny text file with the two unit labels \(\tau_{0}\) and \(\ell_{0}\) and (optionally) the independent anchor \(\lambda_{\mathrm{rec}}\) with its relative uncertainty.
   \item \texttt{makefile} — one-command targets to build the PDF and to run the display calculator without any network or randomness.
 \end{itemize}
@@ -633,7 +634,7 @@ Each named input or bridge statement in the paper has an identifier for audit:
   \item \textbf{RB-Inv-1} — \(\tau_{\mathrm{rec}}/\tau_{0}=2\pi/(8\ln\varphi)\).
   \item \textbf{RB-Inv-2} — \(\lambda_{\mathrm{kin}}/\ell_{0}=2\pi/(8\ln\varphi)\).
   \item \textbf{RB-Inv-3} — \(S/\hbar=J\).
-  \item \textbf{TEST-1} — single pass/fail inequality with coverage \(k\) and \(u_{\mathrm{comb}}\).
+  \item \textbf{TEST-1} — single pass/\,fail inequality with coverage \(k\) and \(u_{\mathrm{comb}}\).
 \end{itemize}
 
 \subsection*{C. Deterministic build instructions (no network, no randomness)}
@@ -645,21 +646,21 @@ Each named input or bridge statement in the paper has an identifier for audit:
 
 \paragraph{Environment for reproducibility.}
 Set the following before any build or run:
-\[
-\texttt{LC\_ALL=C},\quad
-\texttt{TZ=UTC},\quad
-\texttt{SOURCE\_DATE\_EPOCH=1700000000},\quad
-\texttt{PYTHONHASHSEED=0},\quad
-\texttt{NO\_NETWORK=1}.
-\]
+\begin{verbatim}
+export LC_ALL=C
+export TZ=UTC
+export SOURCE_DATE_EPOCH=1700000000
+export PYTHONHASHSEED=0
+export NO_NETWORK=1
+\end{verbatim}
 
 \paragraph{One-command builds.}
 \begin{itemize}
   \item Render the PDF deterministically:
 \[
-\texttt{latexmk -pdf -interaction=nonstopmode -halt-on-error paper.tex}
+\texttt{\small latexmk -pdf -interaction=nonstopmode -halt-on-error paper.tex}
 \]
-  \item Compute displays and the pass/fail statistic (reads \texttt{units.toml} in the same folder):
+  \item Compute displays and the pass/\,fail statistic (reads \texttt{units.toml} in the same folder):
 \begin{verbatim}
 python3 display_calculator.py --units units.toml --print
 \end{verbatim}
@@ -690,12 +691,12 @@ k = 2
 \frac{2\pi}{8\ln\varphi},\qquad
 J(e^{t})=\cosh t-1.
 \]
-\paragraph{Outputs.} The program prints \(\tau_{\mathrm{rec}}\), \(\lambda_{\mathrm{kin}}\), the normalized ratios, and the standardized discrepancy \(Z\) for TEST-1.
+\paragraph{Outputs.} The program prints \(\tau_{\mathrm{rec}}\), \(\lambda_{\mathrm{kin}}\), the normalized ratios, and the standard\-ized discrepancy \(Z\) for TEST-1.
 
 \subsection*{E. Audit steps (what a referee or editor can do quickly)}
 \begin{enumerate}
   \item Verify that \texttt{paper.pdf} matches \texttt{paper.tex} via a fresh build.
-  \item Run the display calculator with \texttt{units.toml}; confirm the three invariants and compute the pass/fail statistic.
+  \item Run the display calculator with \texttt{units.toml}; confirm the three invariants and compute the pass/\,fail statistic.
   \item Recompute \texttt{manifest.txt} and confirm all SHA-256 hashes and sizes match those listed.
   \item Review \texttt{versions.txt} to confirm toolchain locking and environment variables.
 \end{enumerate}
@@ -722,12 +723,12 @@ Sector-specific applications, parameter estimation, spectrum claims, or any feed
 
 \section{Conclusion}
 
-We have fixed a proof-verified \emph{Reality Bridge} that carries a strictly dimensionless derivation layer into SI displays without introducing tunable parameters. The construction delivers (i) non-circularity (unit relabelings factor out), (ii) uniqueness at the stated symmetry, and (iii) two independent SI landings—time-first and length-first—whose numerical agreement is evaluated by a single, predeclared inequality using relative standard uncertainties and an explicit correlation model. The operational outcome is binary: either the two routes agree within combined uncertainty at coverage \(k\), or the semantics (or a landing assumption) is falsified.
+We have fixed a proof-verified \emph{Reality Bridge} that carries a strictly dimensionless derivation layer into SI displays without introducing tunable parameters. The construction delivers (i) non-circularity (unit relabelings factor out), (ii) uniqueness at the stated symmetry, and (iii) two independent SI landings—time-first and length-first—whose numerical agreement is evaluated by a single, pre\-declared inequality using relative standard uncertainties and an explicit correlation model. The operational outcome is binary: either the two routes agree within combined uncertainty at coverage \(k\), or the semantics (or a landing assumption) is falsified.
 
-This closes the gap between formal theorem and laboratory statement with a minimal, auditable interface. The artifact and audit trail make replication straightforward: choose unit labels and anchors, compute displays, declare uncertainties and correlation, and evaluate the pass/fail statistic. Subsequent work may pursue sector-specific applications and higher-precision tests, provided they preserve the no-knob policy and the fixed decision rule introduced here.
+This closes the gap between formal theorem and laboratory statement with a minimal, auditable interface. The artifact and audit trail make replication straightforward: choose unit labels and anchors, compute displays, declare uncertainties and correlation, and evaluate the pass/\,fail statistic. Subsequent work may pursue sector-specific applications and higher-precision tests, provided they preserve the no-knob policy and the fixed decision rule introduced here.
 
 \paragraph{Broader impact.}
-The framework upgrades “parameter-free” from a slogan to an auditable engineering discipline: derivations remain dimensionless and fixed, displays are algebraic and non-circular, and empirical accountability is enforced by a single predeclared inequality. This template is portable: any candidate theory that can present its inputs in the same normalized form can be evaluated against laboratory reality without introducing hidden knobs.
+The framework upgrades “parameter-free” from a slogan to an auditable engineering discipline: derivations remain dimensionless and fixed, displays are algebraic and non-circular, and empirical accountability is enforced by a single pre\-declared inequality. This template is portable: any candidate theory that can present its inputs in the same normalized form can be evaluated against laboratory reality without introducing hidden knobs.
 
 \appendix
 
@@ -829,7 +830,7 @@ By Theorem~\ref{thm:factorization}, \(\Pi=f(K,J)\) and has no dependence on \(\t
 \end{proof}
 
 \begin{remark}[What non-circularity does and does not assert]
-The results above assert that \emph{unit choices and display–level adjustments} cannot alter the numerical content of the dimensionless derivation layer or of its normalized bridge invariants. They do not assert that \emph{measurement noise} is absent; finite uncertainties enter only in the pass/fail test, which compares two independent landings without altering \((K,J)\).
+The results above assert that \emph{unit choices and display–level adjustments} cannot alter the numerical content of the dimensionless derivation layer or of its normalized bridge invariants. They do not assert that \emph{measurement noise} is absent; finite uncertainties enter only in the pass/\,fail test, which compares two independent landings without altering \((K,J)\).
 \end{remark}
 
 \section*{Appendix B.\ Uncertainty Algebra}
@@ -919,24 +920,24 @@ u_{\mathrm{comb}} \ge \big|\,u(\ell_0)-u(\lambda_{\mathrm{rec}})\,\big|\quad(\rh
 Predeclare which bound is used; do not revise after observing \(D\).
 
 \subsection*{B.4 Coverage decisions}
-Let \(Z:=|D|/u_{\mathrm{comb}}\). The acceptance rule is \(Z\le k\) with predeclared \(k\in\{1,2\}\).
+Let \(Z:=|D|/u_{\mathrm{comb}}\). The acceptance rule is \(Z\le k\) with pre\-declared \(k\in\{1,2\}\).
 \begin{itemize}
-  \item If the standardized error is approximately normal, \(k=1\) and \(k=2\) correspond to \(\approx68\%\) and \(\approx95\%\) coverage, respectively.
-  \item Without distributional assumptions, Chebyshev’s inequality guarantees \(P(|Z|>k)\le 1/k^2\); the rule remains valid but conservative.
-  \item If \(u(\cdot)\) is estimated from \(n\) repeats (Type A), replace \(k\) by the appropriate Student-\(t\) quantile \(t_{n-1,\,\gamma}\) (predeclared \(\gamma\)).
+  \item If the standard\-ized error is approximately normal, \(k=1\) and \(k=2\) correspond to \(\approx68\%\) and \(\approx95\%\) coverage, respectively.
+  \item Without distribu\-tional assumptions, Chebyshev’s inequality guarantees \(P(|Z|>k)\le 1/k^2\); the rule remains valid but conservative.
+  \item If \(u(\cdot)\) is estimated from \(n\) repeats (Type A), replace \(k\) by the appropriate Student-\(t\) quantile \(t_{n-1,\,\gamma}\) (pre\-declared \(\gamma\)).
 \end{itemize}
 Coverage level, correlation treatment (\(\rho\) or a bound), and any repetition/averaging protocol must be declared \emph{a priori}.
 
 \subsection*{B.5 Replication and averaging (fixed pipeline)}
-If \(X_i,Y_i\) (\(i=1,\dots,n\)) are \(n\) independent replications using the \emph{same fixed} pipeline and predeclared aggregator, define
+If \(X_i,Y_i\) (\(i=1,\dots,n\)) are \(n\) independent replications using the \emph{same fixed} pipeline and pre\-declared aggregator, define
 \[
 \bar{D}=\frac{1}{n}\sum_i \left(\frac{X_i-Y_i}{Y_i}\right),\qquad
 \bar{u}_{\mathrm{comb}}^2=\frac{1}{n^2}\sum_i u_{\mathrm{comb},i}^2,
 \]
-and test \(|\bar{D}| \le k\,\bar{u}_{\mathrm{comb}}\). Do not alter weights post hoc; if unequal \(u_{\mathrm{comb},i}\) are predeclared, use fixed inverse-variance weights.
+and test \(|\bar{D}| \le k\,\bar{u}_{\mathrm{comb}}\). Do not alter weights post hoc; if unequal \(u_{\mathrm{comb},i}\) are pre\-declared, use fixed inverse\-variance weights.
 
 \paragraph{Summary.}
-The only ingredients entering the decision rule are \(u(\ell_0)\), \(u(\lambda_{\mathrm{rec}})\), the correlation model (\(\rho\) or a conservative bound), and a predeclared coverage factor \(k\). The constants \(K\) and \(J\) are dimensionless and exact in this context and therefore contribute no uncertainty.
+The only ingredients entering the decision rule are \(u(\ell_0)\), \(u(\lambda_{\mathrm{rec}})\), the correlation model (\(\rho\) or a conservative bound), and a pre\-declared coverage factor \(k\). The constants \(K\) and \(J\) are dimensionless and exact in this context and therefore contribute no uncertainty.
 
 \subsection*{B.6 Uncertainty budget (compact list)}
 \textbf{Route A (length-side display \(\ell_0\)).} Contributors to \(u(\ell_0)\): (i) interferometer scale factor; (ii) frequency-comb traceability to the second; (iii) environmental model (pressure, temperature, humidity); (iv) alignment/Abbé offsets; (v) data reduction repeatability. \emph{Target (illustrative):} \(u(\ell_0)=1\times10^{-9}\).
