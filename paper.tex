@@ -1,15 +1,23 @@
 \documentclass[11pt]{article}
 \usepackage{amsmath,amssymb,amsfonts}
-\usepackage[hidelinks]{hyperref}\n\usepackage{verbatim}\n\usepackage{amsthm}
+\usepackage[hidelinks]{hyperref}
+\usepackage{verbatim}
+\usepackage{amsthm}
 \theoremstyle{plain}
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
-\newtheorem{proposition}{Proposition}
-\newtheorem{corollary}{Corollary}
+
+ewtheorem{theorem}{Theorem}
+
+ewtheorem{lemma}{Lemma}
+
+ewtheorem{proposition}{Proposition}
+
+ewtheorem{corollary}{Corollary}
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}
+
+ewtheorem{definition}{Definition}
 \theoremstyle{remark}
-\newtheorem*{remark}{Remark}
+
+ewtheorem*{remark}{Remark}
 
 \title{From Proof to Measurement:\\
 A Reality Bridge with Falsifiable SI Landings}
@@ -120,7 +128,8 @@ Main text uses classical terms (continuity equation, action, gauge-constant, Ham
 (1) No unresolved references; (2) only used packages are loaded; (3) all claims appear as definitions/theorems/lemmas or are explicitly labeled interpretation; (4) “parameter-free” is only used in the derivation sense defined above; (5) the two-landings inequality and uncertainty definitions appear verbatim.
 
 \section{A Motivated Postulate Set for a Parameter-Free Framework}
-\noindent
+
+oindent
 This methods paper operates on a minimal, dimensionless foundation. For completeness, we adopt the following \emph{postulates} as the internal interface to the Reality Bridge. Each postulate is accompanied by a brief motivation; no sector model or fit is assumed.
 
 \begin{description}
@@ -137,13 +146,15 @@ This methods paper operates on a minimal, dimensionless foundation. For complete
   \emph{Motivation.} The fixed-point relation \(x=1+1/x\) selects a unique, scale-free multiplier; using \(\ln\varphi\) as the canonical gap removes arbitrary bases from the display.
 \end{description}
 
-\noindent These postulates are the only inputs visible to the bridge; all claims below are downstream of them and introduce no additional parameters.
+
+oindent These postulates are the only inputs visible to the bridge; all claims below are downstream of them and introduce no additional parameters.
 
 \section{Upstream Proof Layer: Inputs Assumed Here (Dimensionless)}
 All statements in this section are taken as proved upstream and are \emph{not} re-proved here. They are purely dimensionless and will be used only as named inputs to the bridge constructed later.
 
 \medskip
-\noindent\textbf{Input UP-1 (Cost uniqueness and log-axis form).}
+
+oindent\textbf{Input UP-1 (Cost uniqueness and log-axis form).}
 There exists a unique symmetric multiplicative cost
 \[
 J:\ \mathbb{R}_{>0}\to\mathbb{R},\qquad
@@ -156,7 +167,8 @@ J(e^{t})=\cosh t-1,\quad t\in\mathbb{R}.
 \emph{EL corollaries at \(t=0\):} \(J(e^{t})\ge 0\) with equality iff \(t=0\); \(\frac{d}{dt}J(e^{t})\big|_{t=0}=0\); \(\frac{d^{2}}{dt^{2}}J(e^{t})\big|_{t=0}=1\).
 
 \medskip
-\noindent\textbf{Input UP-2 (Quantized tick and discrete potential theory).}
+
+oindent\textbf{Input UP-2 (Quantized tick and discrete potential theory).}
 Let \(U\) be a set and \(R\subseteq U\times U\) a directed reach relation. There exists a fundamental, positive, dimensionless increment \(\delta\) (the \emph{tick}) and a potential \(p:U\to\mathbb{Z}\) such that for every edge \((a,b)\in R\),
 \[
 p(b)-p(a)=\delta.
@@ -168,7 +180,8 @@ p(b)-p(a)=n\cdot\delta.
 Potentials with the same edge increment \(\delta\) differ by a componentwise constant (gauge fixed up to an additive constant on each reach component).
 
 \medskip
-\noindent\textbf{Input UP-3 (Minimal parity cycle in three bits).}
+
+oindent\textbf{Input UP-3 (Minimal parity cycle in three bits).}
 For the parity pattern space \(\{0,1\}^{\{1,2,3\}}\) there exists a cycle that visits every pattern exactly once before repeating, and any such cycle has period exactly
 \[
 2^{3}=8.
@@ -176,14 +189,16 @@ For the parity pattern space \(\{0,1\}^{\{1,2,3\}}\) there exists a cycle that v
 (Equivalently: the eight-tick partition is both attainable and minimal in \(D=3\).)
 
 \medskip
-\noindent\textbf{Input UP-4 (Constants layer: golden-ratio gap).}
+
+oindent\textbf{Input UP-4 (Constants layer: golden-ratio gap).}
 Let \(\varphi=\tfrac{1+\sqrt{5}}{2}\) be the positive solution of \(x=1+\tfrac{1}{x}\) (so \(\varphi^{2}=\varphi+1\)). Define the dimensionless gap
 \[
 \delta_{\mathrm{gap}}:=\ln\varphi>0.
 \]
 
 \medskip
-\noindent These inputs feed the Reality Bridge; no units, calibrations, or empirical parameters are introduced here, and none of the bridge constructions are permitted to alter them.
+
+oindent These inputs feed the Reality Bridge; no units, calibrations, or empirical parameters are introduced here, and none of the bridge constructions are permitted to alter them.
 
 \section{Reality Bridge: Formal Semantics (Definition and Theorems)}
 
@@ -239,7 +254,8 @@ The assignment \(\mathcal{S}:J\mapsto S/\hbar\) has no additive freedom. In part
 \end{proposition}
 
 \begin{proof}
-Any affine alternative would be \(S/\hbar=a\,J+b\) with \(a>0\). From \(J(1)=0\) one gets \(b=0\). If \(a\neq 1\), rescaling would destroy the normalization \(J(e^{t})=\cosh t-1\) at the log-axis minimum \(t=0\). Hence \(a=1\).
+Any affine alternative would be \(S/\hbar=a\,J+b\) with \(a>0\). From \(J(1)=0\) one gets \(b=0\). If \(a
+eq 1\), rescaling would destroy the normalization \(J(e^{t})=\cosh t-1\) at the log-axis minimum \(t=0\). Hence \(a=1\).
 \end{proof}
 
 \begin{proposition}[Uniqueness at the stated symmetry]
@@ -318,10 +334,12 @@ When performed with the same \((\tau_{0},\ell_{0})\) labeling, Route A and Route
 
 \section{Uncertainty Propagation and the Single Pass/Fail Inequality}
 
-\noindent\textbf{Scope.} This section specifies how measurement uncertainty is propagated for the sole compliance check of the Reality Bridge. All uncertainties are \emph{relative standard} (one–sigma) uncertainties.
+
+oindent\textbf{Scope.} This section specifies how measurement uncertainty is propagated for the sole compliance check of the Reality Bridge. All uncertainties are \emph{relative standard} (one–sigma) uncertainties.
 
 \medskip
-\noindent\textbf{Definitions.} Let \(u(\cdot)\) denote relative standard uncertainty. From the bridge identities
+
+oindent\textbf{Definitions.} Let \(u(\cdot)\) denote relative standard uncertainty. From the bridge identities
 \[
 \lambda_{\mathrm{kin}}=c\,\tau_{\mathrm{rec}}
 \quad\text{with}\quad
@@ -341,7 +359,8 @@ u(\lambda_{\mathrm{kin}})=u(\ell_{0}).
 Let the independent length-side landing supply a conventional anchor \(\lambda_{\mathrm{rec}}\) with relative standard uncertainty \(u(\lambda_{\mathrm{rec}})\).
 
 \medskip
-\noindent\textbf{Correlation.} If the realizations of \(\ell_{0}\) and \(\lambda_{\mathrm{rec}}\) are not statistically independent, introduce a correlation coefficient \(\rho\in[-1,1]\) between their relative estimates. The combined relative uncertainty used for the comparison is
+
+oindent\textbf{Correlation.} If the realizations of \(\ell_{0}\) and \(\lambda_{\mathrm{rec}}\) are not statistically independent, introduce a correlation coefficient \(\rho\in[-1,1]\) between their relative estimates. The combined relative uncertainty used for the comparison is
 \[
 u_{\mathrm{comb}}(\rho)
 =\sqrt{\,u(\ell_{0})^{2}+u(\lambda_{\mathrm{rec}})^{2}-2\,\rho\,u(\ell_{0})\,u(\lambda_{\mathrm{rec}})\,}.
@@ -349,7 +368,8 @@ u_{\mathrm{comb}}(\rho)
 When independence is engineered (separate traceability chains), set \(\rho=0\). If \(\rho\) is unknown, a conservative bound is \(u_{\mathrm{comb}}\le u(\ell_{0})+u(\lambda_{\mathrm{rec}})\) (the \(\rho=+1\) worst case).
 
 \medskip
-\noindent\textbf{Quantities to report.}
+
+oindent\textbf{Quantities to report.}
 \[
 \lambda_{\mathrm{kin}},\ u(\lambda_{\mathrm{kin}})=u(\ell_{0});\qquad
 \lambda_{\mathrm{rec}},\ u(\lambda_{\mathrm{rec}});\qquad
@@ -381,7 +401,8 @@ so the effective relative uncertainty is \(u(\lambda_{\mathrm{kin}})=u(\ell_{0})
 \textbf{Correlation policy.} If \(\lambda_{\mathrm{rec}}\) is realized with the \emph{same} hardware or calibration chain as \(\ell_{0}\), take \(\rho>0\) and justify it; otherwise design the landings to be independent so that \(\rho=0\).
 
 \medskip
-\noindent\textbf{Concrete choices used in this paper (frozen for the artifact pack).}
+
+oindent\textbf{Concrete choices used in this paper (frozen for the artifact pack).}
 \begin{enumerate}
   \item \emph{Length unit label \(\ell_{0}\) (Route A).} Realize the meter via an interferometric path-length measurement referenced to an optical frequency comb locked to an SI-traceable second. \textbf{Target:}
   \[
