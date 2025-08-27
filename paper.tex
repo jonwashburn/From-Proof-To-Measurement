@@ -85,7 +85,7 @@ The paper defines the semantics, proves non-circularity and uniqueness, specifie
 The intended use case is the “last-mile” link in fundamental physics between dimensionless derivations and falsifiable, SI-native statements. Abstract or pre-geometric formalisms often yield ratios or symmetries but leave unitful predictions underdetermined. The Reality Bridge is designed to close this gap with a fixed, auditable semantics that remains non-circular and parameter-free at the derivation layer.
 
 \paragraph{Related standards and prior art.}
-We follow the terminology of the VIM (JCGM 200) and the uncertainty framework of the GUM (JCGM 100): uncertainties are reported as (relative) standard uncertainties \(u(\cdot)\) with a predeclared coverage factor \(k\). The SI definitions (9th edition) are used throughout; in particular, \(h\) and \(c\) are exact by definition whereas \(G\) carries a stated standard uncertainty. Our contribution is orthogonal to sector models: it supplies a fixed, auditable semantics that maps dimensionless invariants to SI displays and a single uncertainty-based pass/fail rule without fitting or thresholds.
+We follow the terminology of the VIM~\cite{JCGM200} and the uncertainty framework of the GUM~\cite{JCGM100}: uncertainties are reported as (relative) standard uncertainties \(u(\cdot)\) with a predeclared coverage factor \(k\). The SI definitions (9th edition)~\cite{SI9} are used throughout; in particular, \(h\) and \(c\) are exact by definition whereas \(G\) carries a stated standard uncertainty. Our contribution is orthogonal to sector models: it supplies a fixed, auditable semantics that maps dimensionless invariants to SI displays and a single uncertainty-based pass/fail rule without fitting or thresholds.
 
 \section{Scope, Claims, and Editorial Compliance}
 
@@ -116,7 +116,7 @@ Unit relabelings \((\tau_0,\ell_0)\mapsto(\alpha\tau_0,\beta\ell_0)\) scale disp
 are bridge invariants and the targets of audit.
 
 \paragraph{Language and notation policy.}
-Main text uses classical terms (continuity equation, action, gauge-constant, Hamiltonian/EL where applicable). RS-specific terms appear only where no classical synonym exists and are defined locally. Constants use SI/CODATA values and standard symbols.
+Main text uses classical terms (continuity equation, action, gauge-constant, Hamiltonian/EL where applicable). RS-specific terms appear only where no classical synonym exists and are defined locally. Constants use SI/CODATA values~\cite{CODATA2018,CODATA2022,NISTSP330,NISTSP811} and standard symbols.
 
 \paragraph{Review-ready checklist (enforced at submission).}
 (1) No unresolved references; (2) only used packages are loaded; (3) all claims appear as definitions/theorems/lemmas or are explicitly labeled interpretation; (4) “parameter-free” is only used in the derivation sense defined above; (5) the two-landings inequality and uncertainty definitions appear verbatim.
@@ -295,7 +295,7 @@ with \(c:=\ell_{0}/\tau_{0}\). Thus the normalized displays are bridge invariant
 \]
 
 \paragraph{Choice of conventional length anchor (illustrative).}
-For the length-first landing we adopt, as an illustrative convention, the Planck-scale expression
+For the length-first landing we adopt, as an illustrative convention, the Planck-scale expression~\cite{CGPM2018}
 \[
 \lambda_{\mathrm{rec}}:=\sqrt{\frac{\hbar\,G}{c^{3}}}.
 \]
@@ -353,7 +353,8 @@ When independence is engineered (separate traceability chains), set \(\rho=0\). 
 \medskip
 \noindent\textbf{Quantities to report.}
 \begin{itemize}
-\item ambda_{\mathrm{kin}},\ u(\lambda_{\mathrm{kin}})=u(\ell_{0})n\item ambda_{\mathrm{rec}},\ u(\lambda_{\mathrm{rec}})n\item ho20 20 12 61 79 80 81 98 701 33 100 204 250 395 398 399 400declared or bounded)
+\item ambda_{\mathrm{kin}},\ u(\lambda_{\mathrm{kin}})=u(\ell_{0})n\item ambda_{\mathrm{rec}},\ u(\lambda_{\mathrm{rec}})n\item 
+ho20 20 12 61 79 80 81 98 701 33 100 204 250 395 398 399 400declared or bounded)
 \item  \in \{1,2\}20 20 12 61 79 80 81 98 701 33 100 204 250 395 398 399 400coverage factor)
 \end{itemize}
 
@@ -383,7 +384,7 @@ so the effective relative uncertainty is \(u(\lambda_{\mathrm{kin}})=u(\ell_{0})
 \medskip
 \noindent\textbf{Concrete choices used in this paper (frozen for the artifact pack).}
 \begin{enumerate}
-  \item \emph{Length unit label \(\ell_{0}\) (Route A).} Realize the meter via an interferometric path-length measurement referenced to an optical frequency comb locked to an SI-traceable second. \textbf{Target:}
+  \item \emph{Length unit label \(\ell_{0}\) (Route A).} Realize the meter via an interferometric path-length measurement referenced to an optical frequency comb~\cite{Udem2002,Ludlow2015} locked to an SI-traceable second. \textbf{Target:}
   \[
   u(\ell_{0})=1.0\times10^{-9}.
   \]
@@ -422,7 +423,7 @@ u_{\mathrm{comb}}=\sqrt{\,u(\ell_{0})^{2}+u(\lambda_{\mathrm{rec}})^{2}\,}\appro
 
 \textbf{Procedure.}
 \begin{enumerate}
-  \item \emph{Realize the second.} Lock a local oscillator to the SI definition of the second. Record the relative standard uncertainty \(u(\tau_{0})\) from the comparison interval and reported stability (Allan deviation) of the realization.\footnote{Display-level identities treat \(\tau_{0}\) as a unit name; lab realizations carry finite \(u(\tau_{0})\).}
+  \item \emph{Realize the second.} Lock a local oscillator to the SI definition of the second. Record the relative standard uncertainty \(u(\tau_{0})\) from the comparison interval and reported stability (Allan deviation\cite{Allan1966,NISTSP1065}) of the realization.\footnote{Display-level identities treat \(\tau_{0}\) as a unit name; lab realizations carry finite \(u(\tau_{0})\).}
   \item \emph{Compute the recognition tick.} Set
   \[
   \tau_{\mathrm{rec}}=\frac{2\pi}{8\ln\varphi}\,\tau_{0}.
@@ -1084,5 +1085,15 @@ Let \(\varphi=\tfrac{1+\sqrt{5}}{2}\) be the positive solution of \(x=1+\tfrac{1
 \bibitem{CODATA2018} Mohr P J, Newell D B, Taylor B N and Tiesinga E 2021 CODATA recommended values of the fundamental physical constants: 2018 \textit{Rev. Mod. Phys.} \textbf{93} 025010.
 \bibitem{MiP-Second} BIPM, Mise en pratique for the definition of the second (2019, updated), \url{https://www.bipm.org/en/si-second}.
 \bibitem{MiP-Metre} BIPM, Mise en pratique for the definition of the metre (2019, updated), \url{https://www.bipm.org/en/si-metre}.
+
+\bibitem{CODATA2022} Tiesinga E, Mohr P J, Newell D B and Taylor B N 2023 CODATA recommended values of the fundamental physical constants: 2022 Preprint arXiv:2302.00881.
+\bibitem{NISTSP330} NIST Special Publication 330: The International System of Units (SI), 2019 Ed., NIST.
+\bibitem{NISTSP811} NIST Special Publication 811: Guide for the Use of the International System of Units (SI), 2008 Ed., NIST.
+\bibitem{Udem2002} Udem T, Holzwarth R and Hänsch T W 2002 Optical frequency metrology Nature 416 233–237.
+\bibitem{Ludlow2015} Ludlow A D, Boyd M M, Ye J, Peik E and Schmidt P O 2015 Optical atomic clocks Rev. Mod. Phys. 87 637–701.
+\bibitem{Allan1966} Allan D W 1966 Statistics of atomic frequency standards Proc. IEEE 54 221–230.
+\bibitem{NISTSP1065} NIST Special Publication 1065: Handbook of Frequency Stability Analysis, 2008, NIST.
+\bibitem{CGPM2018} 26th CGPM (2018): Resolution 1—On the revision of the International System of Units (SI).
+
 \end{thebibliography}
 \end{document}
